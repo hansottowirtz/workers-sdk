@@ -39,7 +39,7 @@ jobs:
       - name: Check the changesets
         run: node -r esbuild-register tools/deployments/validate-changesets.ts
 
-      - name: "Create .env file"
+      - name: "Configure turbo repo cache environment variables"
         run: |
           touch .env
           echo TURBO_API=${{ secrets.TURBO_API }} >> .env

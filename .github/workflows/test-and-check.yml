@@ -48,7 +48,7 @@ jobs:
           node-version: ${{ env.node-version }}
           cache: "pnpm"
 
-      - name: "Create .env file"
+      - name: "Configure turbo repo cache environment variables"
         run: |
           touch .env
           echo TURBO_API=${{ secrets.TURBO_API }} >> .env
@@ -98,7 +98,7 @@ jobs:
           node-version: ${{ env.node-version }}
           cache: "pnpm"
 
-      - name: "Create .env file"
+      - name: "Configure turbo repo cache environment variables"
         run: |
           touch .env
           echo TURBO_API=${{ secrets.TURBO_API }} >> .env

@@ -39,7 +39,7 @@ jobs:
       - name: Install NPM Dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: "Create .env file"
+      - name: "Configure turbo repo cache environment variables"
         run: |
           touch .env
           echo TURBO_API=${{ secrets.TURBO_API }} >> .env
